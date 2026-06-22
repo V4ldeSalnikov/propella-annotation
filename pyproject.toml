@@ -1,0 +1,28 @@
+[project]
+name = "propella-annotation"
+version = "0.1.0"
+description = "Utilities for creating Propella document annotations for Dynaword-style datasets."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "datasets>=3.0.0",
+    "huggingface-hub>=0.36.0,<1.0.0",
+    "openai>=1.79.0",
+    "pyarrow>=18.0.0",
+    "pydantic>=2.10.4",
+    "transformers>=4.47.1,<5.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+    "ruff>=0.8.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["src/tests"]
